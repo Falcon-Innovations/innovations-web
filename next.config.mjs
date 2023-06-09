@@ -16,6 +16,10 @@ const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
       { source: "/ping", destination: "/api/health" },
     ]
   },
+  images: {
+    loader: "akamai",
+    path: "",
+  },
 })
 
 export default config
