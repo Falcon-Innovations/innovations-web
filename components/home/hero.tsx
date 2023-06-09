@@ -12,7 +12,7 @@ const Hero = () => {
             <motion.section
                 initial={{opacity: 0, x: -90}}
                 whileInView={{opacity: 1, x: 0}}
-                transition={{duration: 0.3}}
+                transition={{duration: 0.5}}
                 viewport={{once: true}}
                 className='w-1/2 space-y-6' >
                 <Button intent='secondary'>Innovate</Button>
@@ -28,7 +28,7 @@ const Hero = () => {
             <motion.section
                 initial={{opacity: 0, x: 90}}
                 whileInView={{opacity: 1, x: 0}}
-                transition={{duration: 0.3}}
+                transition={{duration: 0.5}}
                 viewport={{once: true}}
                 className='w-1/2'
             >
