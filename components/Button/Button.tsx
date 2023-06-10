@@ -1,18 +1,10 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import {cva, type VariantProps} from "class-variance-authority"
+import { cva, type VariantProps } from "class-variance-authority"
 
-import {twMerge} from "tailwind-merge"
+import { twMerge } from "tailwind-merge"
 
 const button = cva(
-  [
-    "justify-center",
-    "inline-flex",
-    "items-center",
-    "rounded-lg",
-    "text-center",
-    "transition-colors",
-    "delay-50",
-  ],
+  ["justify-center", "inline-flex", "items-center", "rounded-lg", "text-center", "transition-colors", "delay-50"],
   {
     variants: {
       intent: {
@@ -23,7 +15,7 @@ const button = cva(
         sm: ["min-w-20", "h-full", "min-h-10", "text-sm", "py-1.5", "px-4"],
         lg: ["min-w-32", "h-full", "min-h-12", "text-lg", "py-3", "px-4"],
       },
-      underline: {true: ["underline"], false: []},
+      underline: { true: ["underline"], false: [] },
     },
     defaultVariants: {
       intent: "primary",
@@ -37,9 +29,9 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElemen
   href?: string
 }
 
-export function Button({className, intent, size, underline, ...props}: ButtonProps) {
+export function Button({ className, intent, size, underline, ...props }: ButtonProps) {
   return (
-    <a className={twMerge(button({intent, size, className, underline}))} {...props}>
+    <a className={twMerge(button({ intent, size, className, underline }))} {...props}>
       {props.children}
     </a>
   )

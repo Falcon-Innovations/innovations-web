@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Hero from "components/home/hero"
+import Services from "components/home/services"
 import Container from "components/layout/containter"
 import Navbar from "components/shared/navbar"
 
@@ -21,6 +22,7 @@ export default function Web() {
         <Navbar />
         <Hero />
       </Container>
+      <Services />
     </>
   )
 }

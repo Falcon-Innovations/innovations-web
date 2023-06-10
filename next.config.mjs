@@ -17,8 +17,7 @@ const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
     ]
   },
   images: {
-    loader: "akamai",
-    path: "",
+    unoptimized: true,
   },
 })
 
