@@ -1,18 +1,18 @@
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
-import {Button} from "components/Button/Button"
+import { Button } from "components/Button/Button"
 import code from "../../public/code1.png"
 import codeHighlight from "../../public/code5.png"
 
 const Hero = () => {
   return (
-    <main className="mt-12 mb-28 flex w-full items-center">
+    <main className="mb-28 mt-12 flex w-full items-center">
       <motion.section
-        initial={{opacity: 0, x: -90}}
-        whileInView={{opacity: 1, x: 0}}
-        transition={{duration: 1.2}}
-        viewport={{once: true}}
+        initial={{ opacity: 0, x: -90 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2 }}
+        viewport={{ once: true }}
         className="w-1/2 space-y-6"
       >
         <Button intent="secondary">Innovate</Button>
@@ -32,10 +32,10 @@ const Hero = () => {
         </div>
       </motion.section>
       <motion.section
-        initial={{opacity: 0, x: 90}}
-        whileInView={{opacity: 1, x: 0}}
-        transition={{duration: 1.4}}
-        viewport={{once: true}}
+        initial={{ opacity: 0, x: 90 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.4 }}
+        viewport={{ once: true }}
         className="w-1/2"
       >
         <div className="relative">

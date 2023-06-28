@@ -1,4 +1,4 @@
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 import React from "react"
 import Container from "components/layout/containter"
 
@@ -21,7 +21,7 @@ const SERVICES = [
   },
 ]
 
-const Card = ({id, title, description}: {id: number; title: string; description: string}) => (
+const Card = ({ id, title, description }: { id: number; title: string; description: string }) => (
   <div className="group w-full">
     <div
       className="relative z-50 min-h-[150px] w-full max-w-full 
@@ -40,7 +40,7 @@ const Card = ({id, title, description}: {id: number; title: string; description:
 )
 
 const container = {
-  hidden: {opacity: 1, scale: 0},
+  hidden: { opacity: 1, scale: 0 },
   visible: {
     opacity: 1,
     scale: 1,
@@ -52,8 +52,8 @@ const container = {
 }
 
 const item = {
-  visible: {opacity: 1, y: 0},
-  hidden: {opacity: 0, y: 3},
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 3 },
 }
 
 const Services = () => {
@@ -62,10 +62,10 @@ const Services = () => {
       <Container classNames="bg-[#f9f9f9] flex items-center justify-between">
         <motion.div
           className="w-1/2"
-          initial={{opacity: 0, x: -90}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 0.5}}
-          viewport={{once: true}}
+          initial={{ opacity: 0, x: -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <div className="mb-2 flex w-full items-center gap-2 text-2xl text-orange-500">
             <div className="h-[0.8px] w-6 bg-orange-500" />
@@ -79,10 +79,10 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="w-1/2"
-          initial={{opacity: 0, x: 90}}
-          whileInView={{opacity: 1, x: 0}}
-          transition={{duration: 0.5}}
-          viewport={{once: true}}
+          initial={{ opacity: 0, x: 90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <motion.div
             initial="hidden"
