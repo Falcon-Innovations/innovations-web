@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import {motion} from "framer-motion"
 import React from "react"
 import Container from "components/layout/containter"
 
@@ -21,7 +21,7 @@ const SERVICES = [
   },
 ]
 
-const Card = ({ id, title, description }: { id?: number; title: string; description: string }) => (
+const Card = ({id, title, description}: {id: number; title: string; description: string}) => (
   <div className="group w-full">
     <div
       className="relative z-50 min-h-[150px] w-full max-w-full 
@@ -30,7 +30,7 @@ const Card = ({ id, title, description }: { id?: number; title: string; descript
     >
       <div className="z-50 mb-4 flex items-center space-x-2">
         <span className="z-50 flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm text-white">
-          {id}
+          {id + 1}
         </span>
         <h4 className="z-50 font-bold capitalize group-hover:text-blue-600 sm:text-lg">{title}</h4>
       </div>
@@ -40,7 +40,7 @@ const Card = ({ id, title, description }: { id?: number; title: string; descript
 )
 
 const container = {
-  hidden: { opacity: 1, scale: 0 },
+  hidden: {opacity: 1, scale: 0},
   visible: {
     opacity: 1,
     scale: 1,
@@ -52,20 +52,20 @@ const container = {
 }
 
 const item = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: 3 },
+  visible: {opacity: 1, y: 0},
+  hidden: {opacity: 0, y: 3},
 }
 
 const Services = () => {
   return (
-    <section className="mt-44 w-full bg-[#f9f9f9] px-4 py-16">
+    <section className="w-full bg-[#f9f9f9] px-4 py-16">
       <Container classNames="bg-[#f9f9f9] flex items-center justify-between">
         <motion.div
           className="w-1/2"
-          initial={{ opacity: 0, x: -90 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, x: -90}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
         >
           <div className="mb-2 flex w-full items-center gap-2 text-2xl text-orange-500">
             <div className="h-[0.8px] w-6 bg-orange-500" />
@@ -79,10 +79,10 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="w-1/2"
-          initial={{ opacity: 0, x: 90 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, x: 90}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
         >
           <motion.div
             initial="hidden"
