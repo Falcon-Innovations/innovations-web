@@ -3,6 +3,7 @@ import Empower from "components/home/empower"
 import Hero from "components/home/hero"
 import Projects from "components/home/projects"
 import Services from "components/home/services"
+import Team from "components/home/team"
 import Container from "components/layout/containter"
 import Navbar from "components/shared/navbar"
 
@@ -28,6 +29,7 @@ export default function Web() {
       <Empower />
       <Container>
         <Projects />
+        <Team />
       </Container>
     </>
   )
