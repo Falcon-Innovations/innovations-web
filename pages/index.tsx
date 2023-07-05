@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Blog from "components/home/blog"
+import Contact from "components/home/contact"
 import Empower from "components/home/empower"
 import Hero from "components/home/hero"
 import Projects from "components/home/projects"
@@ -30,6 +32,8 @@ export default function Web() {
       <Container>
         <Projects />
         <Team />
+        {/* <Contact /> */}
+        <Blog />
       </Container>
     </>
   )
