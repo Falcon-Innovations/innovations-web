@@ -7,6 +7,7 @@ import Projects from "components/home/projects"
 import Services from "components/home/services"
 import Team from "components/home/team"
 import Container from "components/layout/containter"
+import Footer from "components/layout/footer"
 import Navbar from "components/shared/navbar"
 
 export default function Web() {
@@ -35,6 +36,7 @@ export default function Web() {
         {/* <Contact /> */}
         <Blog />
       </Container>
+      <Footer />
     </>
   )
 }
