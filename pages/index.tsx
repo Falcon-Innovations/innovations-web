@@ -30,8 +30,8 @@ export default function Web() {
       </Container>
       <Services />
       <Empower />
+      <Projects />
       <Container>
-        <Projects />
         <Team />
         {/* <Contact /> */}
         <Blog />

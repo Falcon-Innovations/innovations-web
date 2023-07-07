@@ -1,27 +1,32 @@
 import { motion } from "framer-motion"
+import Image from "next/image"
 import React from "react"
 import Container from "components/layout/containter"
 
 const SERVICES = [
   {
+    icon: "anchor",
     title: "Product design",
     description: "Crafting Seamless and Intuitive User Experiences that Elevate Your Brand's Digital Presence.",
   },
   {
+    icon: "anchor_two",
     title: "Web development",
     description: "Crafting Seamless and Intuitive User Experiences that Elevate Your Brand's Digital Presence.",
   },
   {
+    icon: "anchor_3",
     title: "App development",
     description: "Crafting Seamless and Intuitive User Experiences that Elevate Your Brand's Digital Presence.",
   },
   {
+    icon: "anchor_4",
     title: "Graphic design",
     description: "Crafting Seamless and Intuitive User Experiences that Elevate Your Brand's Digital Presence.",
   },
 ]
 
-const Card = ({ id, title, description }: { id: number; title: string; description: string }) => (
+const Card = ({ icon, title, description }: { icon: string; title: string; description: string }) => (
   <div className="group w-full">
     <div
       className="relative z-50 min-h-[150px] w-full max-w-full 
@@ -29,9 +34,7 @@ const Card = ({ id, title, description }: { id: number; title: string; descripti
             "
     >
       <div className="z-50 mb-4 flex items-center space-x-2">
-        <span className="z-50 flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-sm text-white">
-          {id + 1}
-        </span>
+        <Image src={`${icon}.svg`} alt="calender" width={45} height={45} />
         <h4 className="z-50 font-bold capitalize group-hover:text-blue-600 sm:text-lg">{title}</h4>
       </div>
       <p className="text-black/70 group-hover:text-blue-500">{description}</p>
@@ -88,11 +91,11 @@ const Services = () => {
             initial="hidden"
             animate="visible"
             variants={container}
-            className="grid w-full grid-cols-1 place-items-center items-center justify-between gap-6 sm:grid-cols-2"
+            className="grid w-full grid-cols-1 place-items-center items-center justify-between gap-12 sm:grid-cols-2"
           >
-            {SERVICES.map((service, index) => (
+            {SERVICES.map((service) => (
               <motion.div key={service.title} variants={item}>
-                <Card id={index} {...service} />
+                <Card {...service} />
               </motion.div>
             ))}
           </motion.div>

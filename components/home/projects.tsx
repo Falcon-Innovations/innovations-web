@@ -1,9 +1,26 @@
+import { motion } from "framer-motion"
+import Image from "next/image"
 import React from "react"
+import { Button } from "components/Button/Button"
+import Container from "components/layout/containter"
+import checkMe from "../../public/check-me-mobile.png"
 
 const ProjectCard = () => {
   return (
-    <div className="h-96 w-full">
-      <div className="h-1/2 w-full bg-blue-500" />
+    <div className="w-full">
+      <div className="flex w-full items-center justify-center bg-blue-600 px-4 py-8">
+        <Image
+          alt="code-snippet"
+          src={checkMe}
+          placeholder="blur"
+          width={160}
+          height={202}
+          quality={100}
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </div>
       <div className="bg-white p-4">
         <h4 className="text-2xl font-semibold text-[#414141]">Check Me</h4>
         <div className="mb-4 mt-2 space-x-3">
@@ -31,18 +48,32 @@ const ProjectCard = () => {
 
 const Projects = () => {
   return (
-    <div className="w-full bg-[#f9f9f9] py-12">
-      <h2 className="text-3xl font-semibold">
-        We create customer centric design that makes <br /> results for your company
-      </h2>
-      <p className="mb-6 mt-2 text-lg text-gray-600">
-        We are the answer to develop scalable technology efficiently and to do sustainable business simultaneously.
-      </p>
-      <div className="flex items-center gap-12">
-        {[1, 2, 3].map((item) => (
-          <ProjectCard key={item} />
-        ))}
-      </div>
+    <div className="min-h-[90vh] w-full bg-[#f9f9f9] py-20">
+      <Container classNames="w-full bg-[#f9f9f9]">
+        <motion.h2
+          className="text-3xl font-semibold"
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          We create customer centric design that makes <br /> results for your company
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-6 mt-2 text-lg text-gray-600"
+        >
+          We are the answer to develop scalable technology efficiently and to do sustainable business simultaneously.
+        </motion.p>
+        <div className="flex items-center gap-12">
+          {[1, 2, 3].map((item) => (
+            <ProjectCard key={item} />
+          ))}
+        </div>
+      </Container>
     </div>
   )
 }

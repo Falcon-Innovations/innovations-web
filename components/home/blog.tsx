@@ -6,7 +6,16 @@ const Card = () => {
   return (
     <div className="h-80 w-full">
       <div className="relative h-2/3 w-full rounded-t-xl bg-blue-500">
-        <Image src="photographer.png" alt="photographer" className="h-full w-full" width={500} height={500} />
+        <Image
+          src="photographer.png"
+          alt="photographer"
+          className="h-full w-full"
+          style={{
+            objectFit: "cover",
+          }}
+          width={500}
+          height={500}
+        />
         <div className="absolute bottom-0 mx-auto flex h-[25%] w-full items-center justify-between rounded-t-xl bg-white/30 px-2 py-1 backdrop-blur-sm">
           <div className="flex items-center gap-4 text-xs text-white">
             <div className="flex items-center gap-2 ">

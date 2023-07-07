@@ -4,7 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 
 const button = cva(
-  ["justify-center", "inline-flex", "items-center", "rounded-lg", "text-center", "transition-colors", "delay-50"],
+  [
+    "justify-center",
+    "inline-flex",
+    "items-center",
+    "rounded-lg",
+    "text-center",
+    "transition-colors",
+    "delay-50",
+    "cursor-pointer ",
+  ],
   {
     variants: {
       intent: {

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import { Button } from "components/Button/Button"
@@ -7,9 +8,15 @@ import left from "../../public/left.png"
 
 const Empower = () => {
   return (
-    <section className="w-full bg-[#f9f9f9] px-4 py-16">
-      <Container classNames="bg-[#f9f9f9] flex items-center justify-between">
-        <div className="w-full">
+    <section className="w-full px-4 py-16">
+      <Container classNames="flex items-center justify-between">
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, x: -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+        >
           <Image
             alt="left-img"
             src={left}
@@ -20,8 +27,14 @@ const Empower = () => {
               objectFit: "cover",
             }}
           />
-        </div>
-        <div className="w-full">
+        </motion.div>
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, x: 90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+        >
           <div className="mr-4 flex items-end justify-end">
             <Image
               alt="dots-snippet"
@@ -45,7 +58,7 @@ const Empower = () => {
             embrace digital transformation and unlock new possibilities.
           </p>
           <Button className="mt-4">Send us a message</Button>
-        </div>
+        </motion.div>
       </Container>
     </section>
   )

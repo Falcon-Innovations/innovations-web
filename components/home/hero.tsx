@@ -2,12 +2,13 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import { Button } from "components/Button/Button"
+import Typewriter from "components/typewrritter/typewritter"
 import code from "../../public/code1.png"
 import codeHighlight from "../../public/code5.png"
 
 const Hero = () => {
   return (
-    <main className="mb-28 mt-12 flex w-full items-center">
+    <main className="mb-28 mt-4 flex min-h-[70vh] w-full items-center">
       <motion.section
         initial={{ opacity: 0, x: -90 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -15,7 +16,7 @@ const Hero = () => {
         viewport={{ once: true }}
         className="w-1/2 space-y-6"
       >
-        <Button intent="secondary">Innovate</Button>
+        <Typewriter text="Innovate" />
         <h1 className="text-3xl font-semibold capitalize leading-[40px]">
           Your gateway to{" "}
           <span className="text-blue-600">
