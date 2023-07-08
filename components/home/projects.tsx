@@ -1,13 +1,13 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
-import { Button } from "components/Button/Button"
 import Container from "components/layout/containter"
 import checkMe from "../../public/check-me-mobile.png"
 
 const ProjectCard = () => {
   return (
-    <div className="w-full">
+    <Link className="w-full" href="#">
       <div className="flex w-full items-center justify-center bg-blue-600 px-4 py-8">
         <Image
           alt="code-snippet"
@@ -24,25 +24,31 @@ const ProjectCard = () => {
       <div className="bg-white p-4">
         <h4 className="text-2xl font-semibold text-[#414141]">Check Me</h4>
         <div className="mb-4 mt-2 space-x-3">
-          <span className="rounded-lg bg-orange-100 p-2 text-orange-500 hover:enabled:bg-orange-500 hover:enabled:text-white">
+          <span className="inline-flex items-center gap-2 rounded-2xl bg-orange-100 px-2 py-1 text-sm text-orange-500 hover:enabled:bg-orange-500 hover:enabled:text-white">
+            <Image src="seed.svg" alt="arrow_right" width={23} height={23} />
             Health
           </span>
-          <span className="rounded-lg bg-orange-100 p-2 text-orange-500 hover:enabled:bg-orange-500 hover:enabled:text-white">
+          <span className="inline-flex items-center gap-2 rounded-2xl bg-orange-100 px-2 py-1 text-sm text-orange-500 hover:enabled:bg-orange-500 hover:enabled:text-white">
+            <Image src="chip.svg" alt="arrow_right" width={23} height={23} />
             Technology
           </span>
         </div>
-        <p>
-          breast cancer mobile application will provide a low-cost, accessible, and convenient way for women in Cameroon
+        <p className="text-[#595959]">
+          Breast cancer mobile application will provide a low-cost, accessible, and convenient way for women in Cameroon
           to perform breast self-examinations and get in touch with specialists to diagnose and treat breast cancer at
-          an early stage.
+          an early stage ...
         </p>
         <div className="mt-6 flex items-center space-x-6">
           <p>React Native</p>
           <p>Node JS</p>
           <p>Heroku</p>
         </div>
+        <Link href="#" className="mt-2 flex items-center gap-2 text-blue-800">
+          <p>View project</p>
+          <Image src="arrrow_right.svg" alt="arrow_right" width={23} height={23} />
+        </Link>
       </div>
-    </div>
+    </Link>
   )
 }
 

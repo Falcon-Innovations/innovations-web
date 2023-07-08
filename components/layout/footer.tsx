@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 import Container from "./containter"
 
@@ -18,17 +19,17 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-blue-800">Service</h1>
-          <p>App development</p>
-          <p>Product design</p>
-          <p>Web development</p>
-          <p>Graphic design</p>
+          <Link href="#">App development</Link>
+          <Link href="#">Product design</Link>
+          <Link href="#">Web development</Link>
+          <Link href="#">Graphic design</Link>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-blue-800">Company</h1>
-          <p>Our team</p>
-          <p>Portfolio</p>
-          <p>Blog</p>
-          <p>Contact us</p>
+          <Link href="#">Our team</Link>
+          <Link href="#">Portfolio</Link>
+          <Link href="#">Blog</Link>
+          <Link href="#">Contact us</Link>
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-blue-800">Join our newsletter</h1>
