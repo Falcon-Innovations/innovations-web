@@ -9,25 +9,20 @@ import left from "../../public/left.png"
 const Empower = () => {
   return (
     <section className="w-full px-4 py-16">
-      <Container classNames="flex items-center justify-between">
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0, x: -90 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false }}
-        >
+      <Container classNames="flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between">
+        <div className="w-full">
           <Image
             alt="left-img"
             src={left}
             width={500}
             height={500}
+            className="h-96 w-96 sm:h-[500px] sm:w-[500px]"
             quality={100}
             style={{
               objectFit: "cover",
             }}
           />
-        </motion.div>
+        </div>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, x: 90 }}
@@ -57,7 +52,10 @@ const Empower = () => {
             challenges. Through cutting-edge technology and creative expertise, we empower businesses and individuals to
             embrace digital transformation and unlock new possibilities.
           </p>
-          <Button className="mt-4">Send us a message</Button>
+          <Button className="mt-4">
+            <Image src="chat-bubbles.svg" alt="chat-bubbless" width={18} height={18} className="mr-2" />
+            Send us a message
+          </Button>
         </motion.div>
       </Container>
     </section>

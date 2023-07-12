@@ -48,7 +48,7 @@ const Card = () => {
 
 const Blog = () => {
   return (
-    <div className="mt-32 w-full">
+    <div className="mt-32 hidden w-full sm:block">
       <div className="flex items-center justify-center gap-2 text-orange-500">
         <span className="h-[0.5px] w-8 bg-orange-500" />
         <h1 className="text-2xl">Our blog</h1>

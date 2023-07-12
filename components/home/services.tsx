@@ -62,9 +62,9 @@ const item = {
 const Services = () => {
   return (
     <section className="w-full bg-[#f9f9f9] px-4 py-16">
-      <Container classNames="bg-[#f9f9f9] flex items-center justify-between">
+      <Container classNames="bg-[#f9f9f9] flex flex-col gap-4 sm:gap-0 sm:flex-row items-center justify-between">
         <motion.div
-          className="w-1/2"
+          className="w-full sm:w-1/2"
           initial={{ opacity: 0, x: -90 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -81,7 +81,7 @@ const Services = () => {
           </h3>
         </motion.div>
         <motion.div
-          className="w-1/2"
+          className="w-full sm:w-1/2"
           initial={{ opacity: 0, x: 90 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -91,7 +91,7 @@ const Services = () => {
             initial="hidden"
             animate="visible"
             variants={container}
-            className="grid w-full grid-cols-1 place-items-center items-center justify-between gap-12 sm:grid-cols-2"
+            className="grid w-full grid-cols-1 place-items-center items-center justify-between gap-12 px-8 sm:grid-cols-2 sm:px-0"
           >
             {SERVICES.map((service) => (
               <motion.div key={service.title} variants={item}>

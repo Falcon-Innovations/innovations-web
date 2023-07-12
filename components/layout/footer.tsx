@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
     <section className="mt-60 w-full bg-[#f9f9f9]">
-      <Container classNames="bg-[#f9f9f9] text-black/30 flex items-start justify-between py-16 px-4">
+      <Container classNames="bg-[#f9f9f9] text-black/30 flex flex-col gap-12 sm:gap-0 sm:flex-row items-start justify-between py-16 px-4">
         <div className="flex flex-col gap-4">
           <h1>
             Falcon <span className="text-blue-800">Innovations</span>
@@ -35,9 +35,9 @@ const Footer = () => {
           <h1 className="text-blue-800">Join our newsletter</h1>
         </div>
       </Container>
-      <Container classNames="py-12 px-4 text-black/30 w-full">
+      <Container classNames="py-12 hidden sm:block px-4 text-black/30 w-full">
         <div className="mb-8 h-[1px] w-full bg-blue-100" />
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between text-xs">
           <div>&copy; falconinnovations {currentYear}</div>
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">

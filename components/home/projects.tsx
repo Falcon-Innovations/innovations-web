@@ -54,7 +54,7 @@ const ProjectCard = () => {
 
 const Projects = () => {
   return (
-    <div className="min-h-[90vh] w-full bg-[#f9f9f9] py-20">
+    <div className="hidden min-h-[90vh] w-full bg-[#f9f9f9] py-20 sm:block">
       <Container classNames="w-full bg-[#f9f9f9]">
         <motion.h2
           className="text-3xl font-semibold"

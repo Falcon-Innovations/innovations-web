@@ -33,7 +33,6 @@ export default function Web() {
       <Projects />
       <Container>
         <Team />
-        {/* <Contact /> */}
         <Blog />
       </Container>
       <Footer />
