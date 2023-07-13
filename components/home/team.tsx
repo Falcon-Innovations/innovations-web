@@ -1,7 +1,10 @@
-import Image, { StaticImageData } from "next/image"
+import Image, {StaticImageData} from "next/image"
 import Link from "next/link"
 import React from "react"
-import { Button } from "components/Button/Button"
+import {Button} from "components/Button/Button"
+import Danilo from '../../public/Danilo.jpeg';
+import Dee from '../../public/Dee.jpeg';
+import Eldrige from '../../public/Eldrige.jpg';
 import francis from "../../public/francis.png"
 import github from "../../public/GitHub.png"
 import linkedIn from "../../public/linkedin.png"
@@ -26,6 +29,7 @@ const TEAM = [
     name: "Yuyun Francis",
     title: "CEO",
     highlight: "We are a cross discplinary team that create great experiences for our customers",
+    imag: francis,
   },
   {
     name: "Apoh Eldrige",
@@ -36,6 +40,7 @@ const TEAM = [
       linkedin: "https://www.linkedin.com/in/apoh-eldrige/",
       github: "https://github.com/eldrige",
     },
+    image: Eldrige,
   },
   {
     name: "Didier Vernyuy Yangeh",
@@ -44,6 +49,7 @@ const TEAM = [
     social: {
       linkedin: "https://www.linkedin.com/in/didier-yangeh-20a2b524a",
     },
+    image: Dee
   },
   {
     name: "Bongsai Danilo",
@@ -52,20 +58,21 @@ const TEAM = [
     social: {
       linkedin: "https://www.linkedin.com/in/didier-yangeh-20a2b524a",
     },
+    image: Danilo
   },
 ]
 
-const Card = ({ image = francis, name, title, highlight, social }: CardProps) => {
+const Card = ({image = francis, name, title, highlight, social}: CardProps) => {
   return (
     <div className="flex w-full flex-row justify-between gap-3 sm:flex-col sm:gap-0">
-      <div>
+      <div className="w-[98px] h-[98px] rounded-full">
         <Image
           alt="code-snippet"
           src={image}
           placeholder="blur"
-          className="mb-4 inline-flex rounded-full bg-[#9683A8]"
-          width={98}
-          height={98}
+          className="inline-flex rounded-full bg-[#9683A8]"
+          // width={98}
+          // height={98}
           quality={100}
           style={{
             objectFit: "cover",
