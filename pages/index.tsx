@@ -33,6 +33,9 @@ export default function Web() {
       <Projects />
       <Container>
         <Team />
+      </Container>
+      <Contact />
+      <Container>
         <Blog />
       </Container>
       <Footer />
