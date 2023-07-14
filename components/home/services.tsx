@@ -35,7 +35,7 @@ const Card = ({ icon, title, description }: { icon: string; title: string; descr
     >
       <div className="z-50 mb-4 flex items-center space-x-2">
         <Image src={`${icon}.svg`} alt="calender" width={45} height={45} />
-        <h4 className="z-50 font-bold capitalize group-hover:text-blue-600 sm:text-lg">{title}</h4>
+        <h4 className="z-50 font-bold capitalize sm:text-lg">{title}</h4>
       </div>
       <p className="text-black/70 group-hover:text-blue-500">{description}</p>
     </div>

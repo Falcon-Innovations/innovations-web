@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import { useForm } from "react-hook-form"
@@ -23,10 +24,17 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({})
+
   return (
     <section className="mt-60 w-full bg-[#f9f9f9] py-20">
       <Container classNames="flex w-full gap-12">
-        <div className="hidden w-2/5 sm:block">
+        <motion.div
+          initial={{ opacity: 0, x: -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+          className="hidden w-2/5 sm:block"
+        >
           <Image
             alt="code-snippet"
             src={contact}
@@ -38,8 +46,14 @@ const Contact = () => {
               objectFit: "cover",
             }}
           />
-        </div>
-        <div className="w-full px-4 sm:w-3/5 sm:px-0">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+          className="w-full px-4 sm:w-3/5 sm:px-0"
+        >
           <div className="flex items-center gap-2 text-orange-500">
             <span className="h-[0.5px] w-8 bg-orange-500" />
             <h1 className="text-2xl">Get in touch</h1>
@@ -80,7 +94,7 @@ const Contact = () => {
             </div>
             <Button className="max-w-[12rem]">Submit</Button>
           </form>
-        </div>
+        </motion.div>
       </Container>
     </section>
   )

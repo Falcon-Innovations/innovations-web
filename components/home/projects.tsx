@@ -45,7 +45,7 @@ const ProjectCard = () => {
         </div>
         <Link href="#" className="mt-2 flex items-center gap-2 text-blue-800">
           <p>View project</p>
-          <Image src="arrrow_right.svg" alt="arrow_right" width={23} height={23} />
+          <Image src="arrrow_right.svg" alt="arrow_right" className="bg-blue-800" width={23} height={23} />
         </Link>
       </div>
     </Link>
@@ -61,7 +61,7 @@ const Projects = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           We create customer centric design that makes <br /> results for your company
         </motion.h2>
@@ -69,7 +69,7 @@ const Projects = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           className="mb-6 mt-2 text-lg text-gray-600"
         >
           We are the answer to develop scalable technology efficiently and to do sustainable business simultaneously.

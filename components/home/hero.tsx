@@ -12,7 +12,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: -90 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="w-full space-y-6 sm:w-1/2"
       >
         <Button intent="secondary">Innovate</Button>
@@ -41,7 +41,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 90 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.4 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="w-full sm:w-1/2"
       >
         <div className="relative">

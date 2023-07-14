@@ -24,7 +24,7 @@ const Navbar = () => {
         initial="initial"
         animate="animate"
         variants={slideInFromTop}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="hidden w-full  items-center justify-between py-4 sm:flex"
       >
         <Link href="/" className="">

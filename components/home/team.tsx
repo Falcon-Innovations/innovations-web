@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 import React from "react"
@@ -135,7 +136,13 @@ const Card = ({ image = francis, name, title, highlight, social }: CardProps) =>
 const Team = () => {
   return (
     <div className="mt-32 flex w-full flex-col gap-6 px-4 sm:flex-row sm:gap-0 sm:px-0">
-      <div className="w-full sm:w-2/5">
+      <motion.div
+        initial={{ opacity: 0, x: -90 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false }}
+        className="w-full sm:w-2/5"
+      >
         <div className="flex items-center gap-2 text-orange-500">
           <span className="h-[0.5px] w-8 bg-orange-500" />
           <h1 className="text-2xl">Our Team</h1>
@@ -147,12 +154,18 @@ const Team = () => {
           <Button intent="info">About us</Button>
           <Button>Career opportunities</Button>
         </div>
-      </div>
-      <div className="mt-8 flex w-full grid-cols-3 flex-col gap-12  sm:mt-0 sm:grid sm:w-3/5">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 90 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false }}
+        className="mt-8 flex w-full grid-cols-3 flex-col gap-12  sm:mt-0 sm:grid sm:w-3/5"
+      >
         {TEAM.map((member) => (
           <Card key={member.name} {...member} />
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

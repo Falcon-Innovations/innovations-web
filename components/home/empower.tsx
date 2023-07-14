@@ -10,7 +10,13 @@ const Empower = () => {
   return (
     <section className="w-full px-4 py-16">
       <Container classNames="flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between">
-        <div className="w-full">
+        <motion.div
+          initial={{ opacity: 0, x: -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+          className="w-full"
+        >
           <Image
             alt="left-img"
             src={left}
@@ -22,7 +28,7 @@ const Empower = () => {
               objectFit: "cover",
             }}
           />
-        </div>
+        </motion.div>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, x: 90 }}
