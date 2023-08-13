@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import {motion} from "framer-motion"
 import Image from "next/image"
 import React from "react"
 import Container from "components/layout/containter"
@@ -12,7 +12,7 @@ const SERVICES = [
   {
     icon: "anchor_two",
     title: "Web development",
-    description: "Crafting Seamless and Intuitive User Experiences that Elevate Your Brand's Digital Presence.",
+    description: "Crafting Seamless and intuitive User Experiences that Elevate Your Brand's Digital Presence.",
   },
   {
     icon: "anchor_3",
@@ -26,7 +26,7 @@ const SERVICES = [
   },
 ]
 
-const Card = ({ icon, title, description }: { icon: string; title: string; description: string }) => (
+const Card = ({icon, title, description}: {icon: string; title: string; description: string}) => (
   <div className="group w-full">
     <div
       className="relative z-50 min-h-[150px] w-full max-w-full 
@@ -43,7 +43,7 @@ const Card = ({ icon, title, description }: { icon: string; title: string; descr
 )
 
 const container = {
-  hidden: { opacity: 1, scale: 0 },
+  hidden: {opacity: 1, scale: 0},
   visible: {
     opacity: 1,
     scale: 1,
@@ -55,8 +55,8 @@ const container = {
 }
 
 const item = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: 3 },
+  visible: {opacity: 1, y: 0},
+  hidden: {opacity: 0, y: 3},
 }
 
 const Services = () => {
@@ -65,10 +65,10 @@ const Services = () => {
       <Container classNames="bg-[#f9f9f9] flex flex-col gap-4 sm:gap-0 sm:flex-row items-center justify-between">
         <motion.div
           className="w-full sm:w-1/2"
-          initial={{ opacity: 0, x: -90 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, x: -90}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
         >
           <div className="mb-2 flex w-full items-center gap-2 text-2xl text-orange-500">
             <div className="h-[0.8px] w-6 bg-orange-500" />
@@ -82,10 +82,10 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="w-full sm:w-1/2"
-          initial={{ opacity: 0, x: 90 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          initial={{opacity: 0, x: 90}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
         >
           <motion.div
             initial="hidden"
